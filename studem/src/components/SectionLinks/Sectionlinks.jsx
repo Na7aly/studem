@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link as ScrollLink } from 'react-scroll';
 import styles from './SectionLinks.module.css';
 
-const Sectionlinks = () => {
+const SectionLinks = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -9,14 +10,13 @@ const Sectionlinks = () => {
           <div className={styles.column}>
             <h3>LINK-URI UTILE</h3>
             <ul className={styles.list}>
-              <li><a href="#">Acasa</a></li>
-              <li><a href="#">Despre noi</a></li>
-              <li><a href="#">Domenii</a></li>
-              <li><a href="#">Echipa</a></li>
-              <li><a href="#">Citate STUDEM</a></li>
-              <li><a href="#">Transparentă</a></li>
-              <li><a href="#">Finanțatori</a></li>
-              <li><a href="#">Parteneri</a></li>
+              <li><ScrollLink to="home" smooth={true} duration={500}>Acasa</ScrollLink></li>
+              <li><ScrollLink to="about" smooth={true} duration={500}>Despre noi</ScrollLink></li>
+              <li><ScrollLink to="domains" smooth={true} duration={500}>Domenii</ScrollLink></li>
+              <li><ScrollLink to="team" smooth={true} duration={500}>Echipa</ScrollLink></li>
+              <li><ScrollLink to="testimonial" smooth={true} duration={500}>Citate STUDEM</ScrollLink></li>
+              <li><ScrollLink to="contact" smooth={true} duration={500}>Contact</ScrollLink></li>
+              <li><ScrollLink to="news" smooth={true} duration={500}>News</ScrollLink></li>
             </ul>
           </div>
           <div className={styles.column}>
@@ -35,10 +35,10 @@ const Sectionlinks = () => {
             <h3>Despre noi</h3>
             <p>Centrul de Tineret STUDEM este o structură de auto guvernanță a tinerilor din municipiul Bălți înființată în cadrul unui parteneriat Moldo-Danez de lungă durată. Scopul de bază al Centrului este consolidarea democrației în Republica Moldova prin deprinderea cu principiile democratice în rândul tinerilor</p>
             <ul className={styles.socialIcons}>
-              <li><a href="#"><i className="fab fa-twitter"></i></a></li>
-              <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
-              <li><a href="#"><i className="fab fa-instagram"></i></a></li>
-              <li><a href="#"><i className="fab fa-linkedin-in"></i></a></li>
+              <li><a href="https://twitter.com"><i className="fab fa-twitter"></i></a></li>
+              <li><a href="https://facebook.com"><i className="fab fa-facebook-f"></i></a></li>
+              <li><a href="https://instagram.com"><i className="fab fa-instagram"></i></a></li>
+              <li><a href="https://linkedin.com"><i className="fab fa-linkedin-in"></i></a></li>
             </ul>
           </div>
         </div>
@@ -47,4 +47,4 @@ const Sectionlinks = () => {
   );
 };
 
-export default Sectionlinks;
+export default SectionLinks;

@@ -2,7 +2,7 @@ import React from 'react';
 import { Element } from 'react-scroll';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
-import Sectionlinks from '../components/SectionLinks/Sectionlinks';
+import SectionLinks from '../components/SectionLinks/Sectionlinks';
 import Team from '../components/Team';
 import About from '../components/About';
 import ContactUs from '../components/ContactUs';
@@ -15,6 +15,7 @@ import NewsSection from '../components/News/News';
 const Home = () => {
   return (
     <div>
+      <Navbar />
       <Element name="home">
         <About />
       </Element>
@@ -35,9 +36,10 @@ const Home = () => {
       </Element>
       <ContactUs />
       <Newsletter />
-      <Sectionlinks />
+      <SectionLinks />
+      <Footer />
     </div>
   );
-}
+};
 
 export default Home;
